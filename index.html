@@ -60,7 +60,7 @@
         <p1>Miles Per Gallon:</p1>
         <input id="mpg"type="range" min="24" max="141" value="80" oninput="miles.innerText = this.value">
         <p1 id="miles">80</p1><br><br><br><br><br><br><br>
-        <p1 id="Type">Type of Car</p1><br>
+        <p1 id="Type">Fuel Type</p1><br>
         <input type="checkbox" id="Gas" name="Gas" value="Gas">
         <label for="Gas"> Gas</label><br>
         <input type="checkbox" id="Electric" name="Electric" value="Electric">
@@ -147,25 +147,28 @@
                 <a href="#" onclick="selectOption('Volkswagen')">Volkswagen</a>
             </div>
         </div>
-        <script>
-                function selectOption(option) {
-        const dropdownButton = document.getElementById("dropdownButton");
-        dropdownButton.textContent = option; // Update the button text to selected option
-        document.getElementById("myDropdown").classList.remove("show"); // Close dropdown after selection
-    }
-
-    // Function to show the dropdown menu
-    function myfunction() {
-        const dropdownContent = document.getElementById("myDropdown");
-        dropdownContent.classList.toggle("show"); // Toggle visibility of dropdown
-    }
-
-        </script>
+        
         <br><br><br><br><br><br><br>
        
         <a href="destination.html">
-            <button>Submit</button>
+            <button class="nextButton">Submit</button>
         </a>
+        <script>
+        function selectOption(option) {
+            const dropdownButton = document.getElementById("dropdownButton");
+            dropdownButton.textContent = option; // Update the button text to selected option
+            document.getElementById("myDropdown").classList.remove("show"); // Close dropdown after selection
+        }
+
+        // Function to show the dropdown menu
+            function myfunction() {
+            const dropdownContent = document.getElementById("myDropdown");
+            dropdownContent.classList.toggle("show"); // Toggle visibility of dropdown
+        }
+    
+
+        </script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 
 
