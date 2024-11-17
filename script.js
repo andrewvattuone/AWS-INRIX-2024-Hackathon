@@ -1,7 +1,7 @@
 const submitButton = document.querySelector("button");
 submitButton.addEventListener("click", generateString);
 
-function generateString(event) {
+function generateValues(event) {
     event.preventDefault()
     const minprice = document.getElementById("min").value;
     const maxprice = document.getElementById("max").value;
@@ -39,7 +39,6 @@ function generateString(event) {
         if(brown)
             colors.push("Brown");
     }
-    console.log(output);
-    return output;
+    
     
 } 
