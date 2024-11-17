@@ -2,7 +2,7 @@ const submitButton = document.querySelector("button");
 submitButton.addEventListener("click", generateString);
 
 function generateString(event) {
-    event.preventDefault()
+    event.preventDefault();
     const minprice = document.getElementById("min").value;
     const maxprice = document.getElementById("max").value;
     const mpg = document.getElementById("mpg").value;
