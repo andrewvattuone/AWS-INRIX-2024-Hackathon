@@ -1,15 +1,13 @@
-const submitButton = document.querySelector("button");
-submitButton.addEventListener("click", generateString);
-
-function generateValues(event) {
-    event.preventDefault()
+const submitButton = document.getElementById("nextButton");
+submitButton.addEventListener("click", generateValues);
+function generateValues() {
     const minprice = document.getElementById("min").value;
     const maxprice = document.getElementById("max").value;
     const mpg = document.getElementById("mpg").value;
     const electric = document.getElementById("Electric").checked;
     const gas = document.getElementById("Gas").checked;
     const hybrid = document.getElementById("Hybrid").checked;
-    const brand = document.getElementById("dropdownButton").value;
+    const brand = document.getElementById("dropdownButton").textContent;
     const red = document.getElementById("Red").checked;
     const black = document.getElementById("Black").checked;
     const white = document.getElementById("White").checked;
@@ -39,6 +37,11 @@ function generateValues(event) {
         if(brown)
             colors.push("Brown");
     }
-    
+    console.log(minprice);
+    console.log(maxprice);
+    console.log(mpg);
+    console.log(colors);
+    console.log(types);
+    console.log(brand);
     
 } 
