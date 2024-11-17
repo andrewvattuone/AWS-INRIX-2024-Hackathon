@@ -3,7 +3,8 @@ submitButton.addEventListener("click", generateString);
 
 function generateString(event) {
     event.preventDefault()
-    const price = document.getElementById("price").value;
+    const minprice = document.getElementById("min").value;
+    const maxprice = document.getElementById("max").value;
     const mpg = document.getElementById("mpg").value;
     const electric = document.getElementById("Electric").checked;
     const gas = document.getElementById("Gas").checked;
@@ -14,30 +15,29 @@ function generateString(event) {
     const white = document.getElementById("White").checked;
     const grey = document.getElementById("Grey").checked;
     const brown = document.getElementById("Brown").checked;
-    let output = "Price: $ " + price + " " + "Mpg: " + mpg + " " + "Brand: " + brand + " ";
+    const colors = [];
+    const types = [];
     if(electric||gas||hybrid)
     {
-        output += "Types: ";
         if(electric)
-            output += "electric, ";
+            types.push("Electric");
         if(gas)
-            output += "gas, ";
+            types.push("Gas");
         if(hybrid)
-            output += "hybrid ";
+            types.push("Hybrid");
     }
     if(red||black||white||grey||brown)
     {
-        output += "Colors: ";
         if(red)
-            output += "red, ";
+            colors.push("Red");
         if(black)
-            output += "black, ";
+            colors.push("black");
         if(white)
-            output += "white, ";
+            colors.push("White");
         if(grey)
-            output += "grey, ";
+            colors.push("Grey");
         if(brown)
-            output += "brown ";
+            colors.push("Brown");
     }
     console.log(output);
     return output;
