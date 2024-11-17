@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html> 
     <head>
+    <link rel="stylesheet" href="style.css">
+    >
     <style>
         html {
             scroll-behavior: smooth;
         }
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 50px;
-        }
+        
         p1 {
-            font-family: 'Times New Roman', Times, serif;
             font-size: 25px;
         }
         #Gas {
@@ -49,47 +47,84 @@
     </head>
     <body>
         <h1 style="text-align: center">Car Suggest</h1>
-        <p1>Minimum Price: </p1>
+        
+        <marquee>🚗 🚚 🚙 🏎️ 🛻 🚐 🚛</marquee>
+
+        <div class="background">
+         <br>
+        <p1 class="text">Minimum Price: </p1>
+        <p1 class="value">$</p1>
+        <p1 class="value" id="minprice">90000</p1><br>
+
         <input id="min" type="range" min="17000" max="200000" value="90000" oninput="minprice.innerText = this.value">
-        <p1>$</p1>
-        <p1 id="minprice">90000</p1><br><br><br><br><br><br><br>
-        <p1>Maximum Price: </p1>
+        <br><br>
+
+        <p1 class="text">Maximum Price: </p1>
+        <p1 class="value">$</p1>
+        <p1 class="value" id="maxprice">90000</p1><br>
+        
         <input id="max" type="range" min="17000" max="200000" value="90000" oninput="maxprice.innerText = this.value">
-        <p1>$</p1>
-        <p1 id="maxprice">90000</p1><br><br><br><br><br><br><br>
-        <p1>Miles Per Gallon:</p1>
+        <br>
+        </div>
+
+        <br><br><br>
+        
+
+        <div class="background">
+        <br>
+        <p1 class="text">Miles Per Gallon:</p1>
+        <p1 class="value" id="miles">80</p1><br>
         <input id="mpg"type="range" min="24" max="141" value="80" oninput="miles.innerText = this.value">
-        <p1 id="miles">80</p1><br><br><br><br><br><br><br>
-        <p1 id="Type">Fuel Type</p1><br>
-        <input type="checkbox" id="Gas" name="Gas" value="Gas">
-        <label for="Gas"> Gas</label><br>
+        <br>
+        </div>
+        <br><br><br>
+        
+        <div class="background">
+        <br>
+        <p1 class="text" id="Type">Fuel Type</p1><br>
+        <input  type="checkbox" id="Gas" name="Gas" value="Gas">
+        <label class="value" for="Gas"> Gas</label><br>
         <input type="checkbox" id="Electric" name="Electric" value="Electric">
-        <label for="Electric"> Electric</label><br>
+        <label class="value" for="Electric"> Electric</label><br>
         <input type="checkbox" id="Hybrid" name="Hybrid" value="Hybrid">
-        <label for="Hybrid"> Hybrid</label><br><br><br><br><br><br><br>
-        <p1>Color(s):</p1><br>
+        <label class="value" for="Hybrid"> Hybrid</label><br>
+        </div>
+        <br>
+        <br>
+        </div>
+        <br><br><br>
+        
+        <div class="background">
+        <br>
+        <p1 class="text">Color(s):</p1><br>
         <input type="checkbox" id="Red" name="Red" value="Red">
-        <label for="Red"> Red</label><br>
+        <label class="value" for="Red"> Red</label><br>
         <input type="checkbox" id="Black" name="Black" value="Black">
-        <label for="Black"> Black</label><br>
+        <label class="value" for="Black"> Black</label><br>
         <input type="checkbox" id="White" name="White" value="White">
-        <label for="White"> White</label><br>
+        <label class="value" for="White"> White</label><br>
         <input type="checkbox" id="Grey" name="Grey" value="Grey">
-        <label for="Grey"> Grey</label><br>
+        <label class="value" for="Grey"> Grey</label><br>
         <input type="checkbox" id="Brown" name="Brown" value="Brown">
-        <label for="Brown"> Brown</label><br><br><br><br>
-        <p1>Brand</p1><br>
+        <label class="value" for="Brown"> Brown</label><br><br>
+        </div>
+        <br><br><br>
+
+        <div class="background">
+        <br>
+        <p1 class="text">Brand</p1><br>
         <style>
             .dropbtn {
-                background-color:lightgray;
+                background-color:rgb(193, 214, 205);
                 color: black;
                 padding: 16px;
+                width:150%;
                 font-size: 16px;
                 border: none;
                 cursor: pointer;
             }
             .dropbtn:hover, .dropbtn:focus{
-                background-color: darkgrey;
+                background-color: rgb(193, 214, 205);
             }
             .dropdown {
                 position: relative;
@@ -98,7 +133,7 @@
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: lightgrey;
+                background-color: rgb(193, 214, 205);
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
                 z-index: 1;
@@ -109,46 +144,48 @@
                 text-decoration: none;
                 display: block;
             }
-            .dropdown-content a:hover {background-color: grey;}
+            .dropdown-content a:hover {background-color: rgb(103, 168, 140);}
 
             .dropdown:hover .dropdown-content{display: block;}
 
-            .dropdown:hover .dropbtn {background-color: darkgrey;}
+            .dropdown:hover .dropbtn {background-color: rgb(103, 168, 140);}
 
             .show {display: block;}
         </style>
         <div class="dropdown">
-            <button id="dropdownButton" onclick="myfunction()" class="dropbtn">select</button>
+            <button id="dropdownButton" onclick="myfunction()" class="dropbtn" style="color: rgb(113, 21, 0)">select</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#" onclick="selectOption('Acura')">Acura</a>
-                <a href="#" onclick="selectOption('Audi')">Audi</a>
-                <a href="#" onclick="selectOption('BMW')">BMW</a>
-                <a href="#" onclick="selectOption('Buick')">Buick</a>
-                <a href="#" onclick="selectOption('Chevrolet')">Chevrolet</a>
-                <a href="#" onclick="selectOption('FIAT')">FIAT</a>
-                <a href="#" onclick="selectOption('Ford')">Ford</a>
-                <a href="#" onclick="selectOption('GMC')">GMC</a>
-                <a href="#" onclick="selectOption('Honda')">Honda</a>
-                <a href="#" onclick="selectOption('Hyundai')">Hyundai</a>
-                <a href="#" onclick="selectOption('Kia')">Kia</a>
-                <a href="#" onclick="selectOption('Lexus')">Lexus</a>
-                <a href="#" onclick="selectOption('Lincoln')">Lincoln</a>
-                <a href="#" onclick="selectOption('Mazda')">Mazda</a>
-                <a href="#" onclick="selectOption('Mercedes-Benz')">Mercedes-Benz</a>
-                <a href="#" onclick="selectOption('Mercury')">Mercury</a>
-                <a href="#" onclick="selectOption('MINI')">MINI</a>
-                <a href="#" onclick="selectOption('Mitsubishi')">Mitsubishi</a>
-                <a href="#" onclick="selectOption('Nissan')">Nissan</a>
-                <a href="#" onclick="selectOption('Porsche')">Porsche</a>
-                <a href="#" onclick="selectOption('Scion')">Scion</a>
-                <a href="#" onclick="selectOption('Subaru')">Subaru</a>
-                <a href="#" onclick="selectOption('Tesla')">Tesla</a>
-                <a href="#" onclick="selectOption('Toyota')">Toyota</a>
-                <a href="#" onclick="selectOption('Volkswagen')">Volkswagen</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('Acura')">Acura</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('Audi')">Audi</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('BMW')">BMW</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('Buick')">Buick</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('Chevrolet')">Chevrolet</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('FIAT')">FIAT</a>
+                <a style="color: rgb(113, 21, 0)" href="#" onclick="selectOption('Ford')">Ford</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('GMC')">GMC</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Honda')">Honda</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Hyundai')">Hyundai</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Kia')">Kia</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Lexus')">Lexus</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Lincoln')">Lincoln</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Mazda')">Mazda</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Mercedes-Benz')">Mercedes-Benz</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Mercury')">Mercury</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('MINI')">MINI</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Mitsubishi')">Mitsubishi</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Nissan')">Nissan</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Porsche')">Porsche</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Scion')">Scion</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Subaru')">Subaru</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Tesla')">Tesla</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Toyota')">Toyota</a>
+                <a style="color: rgb(113, 21, 0)" class="value" href="#" onclick="selectOption('Volkswagen')">Volkswagen</a>
             </div>
         </div>
+        <br>
+        </div>
         
-        <br><br><br><br><br><br><br>
+        <br><br><br>
        
         <a href="destination.html">
             <button id="nextButton">Submit</button>
