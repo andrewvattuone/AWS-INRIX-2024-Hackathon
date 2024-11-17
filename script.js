@@ -2,14 +2,14 @@ const submitButton = document.querySelector("button");
 submitButton.addEventListener("click", generateString);
 
 function generateString(event) {
-    event.preventDefault();
+    event.preventDefault()
     const minprice = document.getElementById("min").value;
     const maxprice = document.getElementById("max").value;
     const mpg = document.getElementById("mpg").value;
     const electric = document.getElementById("Electric").checked;
     const gas = document.getElementById("Gas").checked;
     const hybrid = document.getElementById("Hybrid").checked;
-    const brand = document.getElementById("Brand").value;
+    const brand = document.getElementById("dropdownButton").value;
     const red = document.getElementById("Red").checked;
     const black = document.getElementById("Black").checked;
     const white = document.getElementById("White").checked;
