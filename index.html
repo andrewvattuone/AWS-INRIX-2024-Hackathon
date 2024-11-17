@@ -1,175 +1,47 @@
-<!DOCTYPE html>
-<html> 
-    <head>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 50px;
-        }
-        p1 {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 25px;
-        }
-        #Gas {
-            height: 25px;
-            width: 25px;
-        }
-        #Electric {
-            height: 25px;
-            width: 25px;
-        }
-        #Hybrid {
-            height: 25px;
-            width: 25px;
-        }
-        #Red {
-            height: 25px;
-            width: 25px;
-        }
-        #Black {
-            height: 25px;
-            width: 25px;
-        }
-        #White {
-            height: 25px;
-            width: 25px;
-        }
-        #Grey {
-            height: 25px;
-            width: 25px;
-        }
-        #Brown {
-            height: 25px;
-            width: 25px;
-        }
-    </style>
-    </head>
-    <body>
-        <h1 style="text-align: center">Car Suggest</h1>
-        <p1>Minimum Price: </p1>
-        <input id="min" type="range" min="17000" max="200000" value="90000" oninput="minprice.innerText = this.value">
-        <p1>$</p1>
-        <p1 id="minprice">90000</p1><br><br><br><br><br><br><br>
-        <p1>Maximum Price: </p1>
-        <input id="max" type="range" min="17000" max="200000" value="90000" oninput="maxprice.innerText = this.value">
-        <p1>$</p1>
-        <p1 id="maxprice">90000</p1><br><br><br><br><br><br><br>
-        <p1>Miles Per Gallon:</p1>
-        <input id="mpg"type="range" min="24" max="141" value="80" oninput="miles.innerText = this.value">
-        <p1 id="miles">80</p1><br><br><br><br><br><br><br>
-        <p1 id="Type">Fuel Type</p1><br>
-        <input type="checkbox" id="Gas" name="Gas" value="Gas">
-        <label for="Gas"> Gas</label><br>
-        <input type="checkbox" id="Electric" name="Electric" value="Electric">
-        <label for="Electric"> Electric</label><br>
-        <input type="checkbox" id="Hybrid" name="Hybrid" value="Hybrid">
-        <label for="Hybrid"> Hybrid</label><br><br><br><br><br><br><br>
-        <p1>Color(s):</p1><br>
-        <input type="checkbox" id="Red" name="Red" value="Red">
-        <label for="Red"> Red</label><br>
-        <input type="checkbox" id="Black" name="Black" value="Black">
-        <label for="Black"> Black</label><br>
-        <input type="checkbox" id="White" name="White" value="White">
-        <label for="White"> White</label><br>
-        <input type="checkbox" id="Grey" name="Grey" value="Grey">
-        <label for="Grey"> Grey</label><br>
-        <input type="checkbox" id="Brown" name="Brown" value="Brown">
-        <label for="Brown"> Brown</label><br><br><br><br>
-        <p1>Brand</p1><br>
-        <style>
-            .dropbtn {
-                background-color:lightgray;
-                color: black;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
-            }
-            .dropbtn:hover, .dropbtn:focus{
-                background-color: darkgrey;
-            }
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: lightgrey;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-                z-index: 1;
-            }
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            .dropdown-content a:hover {background-color: grey;}
-
-            .dropdown:hover .dropdown-content{display: block;}
-
-            .dropdown:hover .dropbtn {background-color: darkgrey;}
-
-            .show {display: block;}
-        </style>
-        <div class="dropdown">
-            <button id="dropdownButton" onclick="myfunction()" class="dropbtn">select</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#" onclick="selectOption('Acura')">Acura</a>
-                <a href="#" onclick="selectOption('Audi')">Audi</a>
-                <a href="#" onclick="selectOption('BMW')">BMW</a>
-                <a href="#" onclick="selectOption('Buick')">Buick</a>
-                <a href="#" onclick="selectOption('Chevrolet')">Chevrolet</a>
-                <a href="#" onclick="selectOption('FIAT')">FIAT</a>
-                <a href="#" onclick="selectOption('Ford')">Ford</a>
-                <a href="#" onclick="selectOption('GMC')">GMC</a>
-                <a href="#" onclick="selectOption('Honda')">Honda</a>
-                <a href="#" onclick="selectOption('Hyundai')">Hyundai</a>
-                <a href="#" onclick="selectOption('Kia')">Kia</a>
-                <a href="#" onclick="selectOption('Lexus')">Lexus</a>
-                <a href="#" onclick="selectOption('Lincoln')">Lincoln</a>
-                <a href="#" onclick="selectOption('Mazda')">Mazda</a>
-                <a href="#" onclick="selectOption('Mercedes-Benz')">Mercedes-Benz</a>
-                <a href="#" onclick="selectOption('Mercury')">Mercury</a>
-                <a href="#" onclick="selectOption('MINI')">MINI</a>
-                <a href="#" onclick="selectOption('Mitsubishi')">Mitsubishi</a>
-                <a href="#" onclick="selectOption('Nissan')">Nissan</a>
-                <a href="#" onclick="selectOption('Porsche')">Porsche</a>
-                <a href="#" onclick="selectOption('Scion')">Scion</a>
-                <a href="#" onclick="selectOption('Subaru')">Subaru</a>
-                <a href="#" onclick="selectOption('Tesla')">Tesla</a>
-                <a href="#" onclick="selectOption('Toyota')">Toyota</a>
-                <a href="#" onclick="selectOption('Volkswagen')">Volkswagen</a>
-            </div>
-        </div>
-        
-        <br><br><br><br><br><br><br>
-       
-        <a href="destination.html">
-            <button class="nextButton">Submit</button>
-        </a>
-        <script>
-        function selectOption(option) {
-            const dropdownButton = document.getElementById("dropdownButton");
-            dropdownButton.textContent = option; // Update the button text to selected option
-            document.getElementById("myDropdown").classList.remove("show"); // Close dropdown after selection
-        }
-
-        // Function to show the dropdown menu
-            function myfunction() {
-            const dropdownContent = document.getElementById("myDropdown");
-            dropdownContent.classList.toggle("show"); // Toggle visibility of dropdown
-        }
+const submitButton = document.getElementById("nextButton");
+submitButton.addEventListener("click", generateValues);
+function generateValues() {
+    const minprice = document.getElementById("min").value;
+    const maxprice = document.getElementById("max").value;
+    const mpg = document.getElementById("mpg").value;
+    const electric = document.getElementById("Electric").checked;
+    const gas = document.getElementById("Gas").checked;
+    const hybrid = document.getElementById("Hybrid").checked;
+    const brand = document.getElementById("dropdownButton").textContent;
+    const red = document.getElementById("Red").checked;
+    const black = document.getElementById("Black").checked;
+    const white = document.getElementById("White").checked;
+    const grey = document.getElementById("Grey").checked;
+    const brown = document.getElementById("Brown").checked;
+    const colors = [];
+    const types = [];
+    if(electric||gas||hybrid)
+    {
+        if(electric)
+            types.push("Electric");
+        if(gas)
+            types.push("Gas");
+        if(hybrid)
+            types.push("Hybrid");
+    }
+    if(red||black||white||grey||brown)
+    {
+        if(red)
+            colors.push("Red");
+        if(black)
+            colors.push("black");
+        if(white)
+            colors.push("White");
+        if(grey)
+            colors.push("Grey");
+        if(brown)
+            colors.push("Brown");
+    }
+    console.log(minprice);
+    console.log(maxprice);
+    console.log(mpg);
+    console.log(colors);
+    console.log(types);
+    console.log(brand);
     
-
-        </script>
-        <script type="text/javascript" src="script.js"></script>
-    </body>
-
-
-</html>
+} 
