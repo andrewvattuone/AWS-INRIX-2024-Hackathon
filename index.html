@@ -30,7 +30,8 @@
     <body>
         <h1 style="text-align: center">Car Suggestion</h1>
         <p1>Price: </p1>
-        <input type="range" min="17000" max="200000" value="90000" oninput="rangeValue.innerText = this.value">
+        <input type="range" min="5000" max="175000" value="90000" oninput="rangeValue.innerText = this.value" 
+        style="width: 600px">
         <p1>$</p1>
         <p1 id="rangeValue">90000</p1><br><br><br><br><br><br><br>
         <p1 id="Type">Type of Car</p1><br>
@@ -41,7 +42,90 @@
         <input type="checkbox" id="Hybrid" name="Hybrid" value="Hybrid">
         <label for="Hybrid"> Hybrid</label><br><br><br><br><br><br><br>
         <p1>Brand</p1><br>
-        <input type="text" id="Brand" name="Brand" value="None"><br><br>
+        <style>
+            .dropbtn {
+                background-color:lightgray;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropbtn:hover, .dropbtn:focus{
+                background-color: darkgrey;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: lightgrey;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {background-color: grey;}
+
+            .dropdown:hover .dropdown-content{display: block;}
+
+            .dropdown:hover .dropbtn {background-color: darkgrey;}
+
+            .show {display: block;}
+        </style>
+        <div class="dropdown">
+            <button id="dropdownButton" onclick="myfunction()" class="dropbtn">select</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" onclick="selectOption('Acura')">Acura</a>
+                <a href="#" onclick="selectOption('Audi')">Audi</a>
+                <a href="#" onclick="selectOption('BMW')">BMW</a>
+                <a href="#" onclick="selectOption('Buick')">Buick</a>
+                <a href="#" onclick="selectOption('Chevrolet')">Chevrolet</a>
+                <a href="#" onclick="selectOption('FIAT')">FIAT</a>
+                <a href="#" onclick="selectOption('Ford')">Ford</a>
+                <a href="#" onclick="selectOption('GMC')">GMC</a>
+                <a href="#" onclick="selectOption('Honda')">Honda</a>
+                <a href="#" onclick="selectOption('Hyundai')">Hyundai</a>
+                <a href="#" onclick="selectOption('Kia')">Kia</a>
+                <a href="#" onclick="selectOption('Lexus')">Lexus</a>
+                <a href="#" onclick="selectOption('Lincoln')">Lincoln</a>
+                <a href="#" onclick="selectOption('Mazda')">Mazda</a>
+                <a href="#" onclick="selectOption('Mercedes-Benz')">Mercedes-Benz</a>
+                <a href="#" onclick="selectOption('Mercury')">Mercury</a>
+                <a href="#" onclick="selectOption('MINI')">MINI</a>
+                <a href="#" onclick="selectOption('Mitsubishi')">Mitsubishi</a>
+                <a href="#" onclick="selectOption('Nissan')">Nissan</a>
+                <a href="#" onclick="selectOption('Porsche')">Porsche</a>
+                <a href="#" onclick="selectOption('Scion')">Scion</a>
+                <a href="#" onclick="selectOption('Subaru')">Subaru</a>
+                <a href="#" onclick="selectOption('Tesla')">Tesla</a>
+                <a href="#" onclick="selectOption('Toyota')">Toyota</a>
+                <a href="#" onclick="selectOption('Volkswagen')">Volkswagen</a>
+            </div>
+        </div>
+        <script>
+                function selectOption(option) {
+        const dropdownButton = document.getElementById("dropdownButton");
+        dropdownButton.textContent = option; // Update the button text to selected option
+        document.getElementById("myDropdown").classList.remove("show"); // Close dropdown after selection
+    }
+
+    // Function to show the dropdown menu
+    function myfunction() {
+        const dropdownContent = document.getElementById("myDropdown");
+        dropdownContent.classList.toggle("show"); // Toggle visibility of dropdown
+    }
+
+        </script>
+        <br><br><br><br><br><br><br>
+       
         <a href="destination.html">
             <button>Submit</button>
         </a>
