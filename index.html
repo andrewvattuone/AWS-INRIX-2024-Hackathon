@@ -50,12 +50,12 @@
     <body>
         <h1 style="text-align: center">Car Suggest</h1>
         <p1>Price: </p1>
-        <input class="costslider" type="range" min="17000" max="200000" value="90000" oninput="rangeValue.innerText = this.value">
+        <input id="price" type="range" min="17000" max="200000" value="90000" oninput="rangeValue.innerText = this.value">
         <p1>$</p1>
         <p1 id="rangeValue">90000</p1><br><br><br><br><br><br><br>
         <p1>Miles Per Gallon:</p1>
-        <input type="range" min="24" max="141" value="80" oninput="mpg.innerText = this.value">
-        <p1 id="mpg">80</p1><br><br><br><br><br><br><br>
+        <input id="mpg"type="range" min="24" max="141" value="80" oninput="miles.innerText = this.value">
+        <p1 id="miles">80</p1><br><br><br><br><br><br><br>
         <p1 id="Type">Type of Car</p1><br>
         <input type="checkbox" id="Gas" name="Gas" value="Gas">
         <label for="Gas"> Gas</label><br>
@@ -64,7 +64,7 @@
         <input type="checkbox" id="Hybrid" name="Hybrid" value="Hybrid">
         <label for="Hybrid"> Hybrid</label><br><br><br><br><br><br><br>
         <p1>Brand</p1><br>
-        <input class="brandselector" type="text" id="Brand" name="Brand" value="None"><br><br><br><br><br><br><br>
+        <input type="text" id="Brand" name="Brand" value="None"><br><br><br><br><br><br><br>
         <p1>Color(s):</p1><br>
         <input type="checkbox" id="Red" name="Red" value="Red">
         <label for="Red"> Red</label><br>
@@ -79,6 +79,7 @@
         <a href="destination.html">
             <button>Submit</button>
         </a>
+        <script src="script.js"></script>
     </body>
 
 
